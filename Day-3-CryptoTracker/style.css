@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: #323232;
+}
+
+.container{
+    display: grid;
+    align-items: center;
+    justify-content: center;    
+}
+
+.title{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.title text{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #FBC551;
+}
+
+.crypto-container{
+    height: 800px;
+    width: 500px;
+    background: #FBC551;
+    border-radius: 8px;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin{
+    display: flex;
+    width: 480px;
+    height: 80px;
+    border-radius: 8px;
+    margin: 5px;
+    font-family: sans-serif;
+}
+
+.coin .coin-logo{
+    width: 80px;
+    width: 80px;
+    display: grid;
+    place-items: center;
+}
+.coin .coin-logo img{
+    width: 70%;
+    height: 70%;
+}
+
+.coin .coin-name{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.coin .coin-name h3{
+    color: #FBC551;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.coin .coin-name span{
+    color: #aaa;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 6px 0 0 2px;
+}
+
+.coin .coin-price{
+    display: grid;
+    align-items: center;
+    margin-left: auto;
+    padding: 8px 22px 0px 0px;
+    text-align: right;
+}
+
+.coin .coin-price .price{
+    font-size: 26px;
+    font-weight: 700;
+    margin: -6px;
+}
+
+.coin .coin-price .change{
+    color :#c1c1c1;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -30px;
+}
+
+.coin.rising{
+    background: linear-gradient(90deg,#202022, #4eb64581);
+}
+
+.coin.falling{
+    background: linear-gradient(90deg,#202022, #b645456e);
+}
+
+.coin.falling .coin-price .price{
+    color: #b70000;
+}
+
+.coin.rising .coin-price .price{
+    color: #1c6820;
+}
