@@ -1,0 +1,208 @@
+html, body{
+    min-height: 100%;
+    height: 100%;
+}
+
+:root{
+    --primary-color:#131086;
+    --secondary-color:#b621f3;
+}
+
+body{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.input-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 0.5fr 0.2fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    align-items: start;
+    justify-items: center;
+  }
+
+  text{
+    align-self: center;
+  }
+.text-area{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    padding: 5px;
+    justify-items: center;
+    align-items: start;
+}
+.text-area .title{
+    font-size: 4vw;
+    
+    font-weight: 900;
+    align-self: center;
+}
+.text-area .text{
+    font-size: 3vw;
+    align-self: flex-start;
+}
+
+.input-group {
+    position: relative;
+    margin-top: 10px;
+}
+
+.input-group .input-area {
+    outline: none;
+    border: 2px solid #dadce0;
+    padding: 15px 13.5px;
+    font-size: 18px;
+    border-radius: 32px;
+}
+
+.input-group .input-area:valid + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.input-group .input-area:focus {
+    border: 2px solid royalblue;
+}
+
+.input-group .label {
+    color: #8d8d8d;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    text-transform: capitalize;
+    background: #ffffff;
+}
+
+.input-group .input-area:focus + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: royalblue;
+}
+
+.remember-me{
+    display: flex;
+    margin-top: 5px;
+    width: 250px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+input[type=checkbox] {
+    align-self: center;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 3px;
+    background-color: white;
+}
+
+/*Adds a tick when the button is pressed*/
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 10px;
+    border: solid var(--secondary-color);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.clickable-button {
+    width: 350px;
+    padding: 15px;
+
+    color: #fff;
+    background-color: var(--secondary-color);
+
+    background:linear-gradient(90deg, var(--primary-color), var(--secondary-color)) ;
+    outline: none;
+    border: none;
+
+    border-radius: 32px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.image-container{
+    display: grid;
+    width: 40vw;
+    height: 40vw;
+    margin-top: 50px;
+
+    align-content: center;
+    justify-content: center;
+    border-radius: 50vw;
+    background-color: black;
+}
+.image-container img{
+    max-width: 100%;
+    width: 38vw;
+    height: 38vw;
+}
+
+/* limits  */
+@media screen and (min-width: 720px) {
+    .text-area .title{
+        font-size: 32px;
+        
+        font-weight: 900;
+        align-self: center;
+    }
+
+    .text-area .text{
+        font-size: 16px;
+    }
+
+    .image-container{
+        display: grid;
+        width: 240px;
+        height: 240px;
+        margin-top: 50px;
+    
+        align-content: center;
+        justify-content: center;
+        border-radius: 50vw;
+        background-color: black;
+    }
+    .image-container img{
+        width: 230px;
+        height: 230px;
+    }
+  }
