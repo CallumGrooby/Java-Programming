@@ -1,244 +1,257 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Rubik&display=swap");
 
-:root{
-    --text-color:#293241;
-    --secondary-color:#98c1d9;
-    --primary-color:#3d5a80;
+:root {
+  --text-color: #293241;
+  --secondary-color: #98c1d9;
+  --primary-color: #3d5a80;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-h1,h2,h3,p,span,i{
-    font-family: 'Golos Text', sans-serif;
-    color: var(--primary-color);
+h1,
+h2,
+h3,
+p,
+span,
+i {
+  font-family: "Golos Text", sans-serif;
+  color: var(--primary-color);
 }
 
 body {
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  #wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 400px;
-    height: 500px;
-    border-radius: 8px;
-    box-sizing: border-box;
-  }
-
-nav{
-    display: flex;
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px solid var(--secondary-color);
-}
-.date{
-    display: flex;
-    box-sizing: border-box;
-    flex-basis: calc(100%/3);
-    margin: 8px;
-
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-self: center;
-    margin: 0;
-    margin-left: 16px;
-    margin-right: 16px;
-    height: 100%;
+  background-color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.date #date-date{
-    font-size: 40px;
-    align-self: center;
-    justify-self: center;
-    margin-right: 8px;
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-.date #date-words{
-    align-self: center;
-    justify-self: center;
+nav {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid var(--secondary-color);
 }
-.date .date-text{
-    margin: 0px;
-    font-size: 0.8rem;
-}
+.date {
+  display: flex;
+  box-sizing: border-box;
+  flex-basis: calc(100% / 3);
+  margin: 8px;
 
-#title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0;
-    margin-left: 16px;
-    margin-right: 16px;
-}
-.add-task{
-    display: flex;
-    margin: 8px;
-    align-items: center;
-}
-.add-task button{
-    margin-left: 6px;
-    margin-right: 6px;
-    min-width: 34px;
-    min-height: 34px;
-
-    width: 40px;
-    height: 40px;
-
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 8px;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-self: center;
+  margin: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 100%;
 }
 
-.add-task button, i{
-    color: #fff;
+.date #date-date {
+  font-size: 40px;
+  align-self: center;
+  justify-self: center;
+  margin-right: 8px;
 }
 
-.add-task button:hover{
-    background-color: var(--secondary-color);
+.date #date-words {
+  align-self: center;
+  justify-self: center;
+}
+.date .date-text {
+  margin: 0px;
+  font-size: 0.8rem;
 }
 
-.add-task input{
-    width: 100%;
-    height: 40px;
-    border-color: var(--primary-color);
-    border:1px solid;
-    border-radius: 8px;
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.add-task {
+  display: flex;
+  margin: 8px;
+  align-items: center;
+}
+.add-task button {
+  margin-left: 6px;
+  margin-right: 6px;
+  min-width: 34px;
+  min-height: 34px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
 }
 
-.add-task input::placeholder{
-    font-family: 'Golos Text', sans-serif;
-    margin-left: 16px;
+.add-task button,
+i {
+  color: #fff;
 }
 
-
-main{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    overflow: auto;
-    overflow-x: hidden;
-}
-main h1{
-    font-size: 18px;
-    margin: 8px;
-    width: auto;
-}
-.task{
-    display: flex;
-    flex-grow:1;
-    height: 40px;
-
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-
-    align-items: center;
-    background: var(--secondary-color);
-    border-radius: 8px;
-    white-space: nowrap;
+.add-task button:hover {
+  background-color: var(--secondary-color);
 }
 
-input[type=checkbox] {
-    opacity: 0;
-    align-self: center;
-    position: relative;
-    cursor: pointer;
-    margin-bottom: 10px;
-    margin-right: 10px;
+.add-task input {
+  width: 100%;
+  height: 40px;
+  border-color: var(--primary-color);
+  border: 1px solid;
+  border-radius: 8px;
 }
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
 
-    width: 16px;
-    height: 16px;
-    top: 0;
-    left: 0;
-    border: 2px solid #555555;
-    border-radius: 3px;
-    background-color: white;
+.add-task input::placeholder {
+  font-family: "Golos Text", sans-serif;
+  margin-left: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: auto;
+  overflow-x: hidden;
+}
+main h1 {
+  font-size: 18px;
+  margin: 8px;
+  width: auto;
+}
+.task {
+  display: flex;
+  flex-grow: 1;
+  height: 40px;
+
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  align-items: center;
+  background: var(--secondary-color);
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
 }
 
 /*Adds a tick when the button is pressed*/
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 10px;
-    border: solid var(--primary-color);
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 2px;
-    left: 6px;
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: solid var(--primary-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
 }
 
-.task button{
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    align-self: flex-end;
-    height: 100%;
-    margin: 0;
-    min-width: 40px;
-    background-color: var(--primary-color);
-    border: none;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
+.task button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-self: flex-end;
+  height: 100%;
+  margin: 0;
+  min-width: 40px;
+  background-color: var(--primary-color);
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
 
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.task p{
-    pointer-events: none;
-    margin: 0px;
-    width: 100%;
-    padding: 8px;
-    overflow: hidden;
+.task p {
+  pointer-events: none;
+  margin: 0px;
+  width: 100%;
+  padding: 8px;
+  overflow: hidden;
 }
 
 .task-text.checked {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-.task button, i{
-    color: #fff;
+.task button,
+i {
+  color: #fff;
 }
 
-.task button:hover{
-    background-color: #7594a7;
+.task button:hover {
+  background-color: #7594a7;
 }
 
-::-webkit-scrollbar{
-    margin-right: 8px;
-    width: 8px;
+::-webkit-scrollbar {
+  margin-right: 8px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--secondary-color); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color); 
-  }
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+a {
+  font-size: 24px;
+  margin-top: 64px;
+  color: white;
+}
